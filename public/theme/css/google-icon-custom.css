@@ -1,0 +1,12 @@
+.google-icon{
+    font-size: 18px;
+}
+
+span.material-symbols-outlined.google-icon.visibility
+{
+    padding-top: 5px;
+}
+
+.d-flex.align-items-center.gap-3.fs-6 a {
+    margin:-5px;
+}

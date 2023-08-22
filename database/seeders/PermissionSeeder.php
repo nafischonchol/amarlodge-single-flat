@@ -1,0 +1,471 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Permission;
+
+class PermissionSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        $permissions = [
+            [
+                'name' => 'home',
+                'display_name' => 'Dashboard',
+                'module' => '',
+                'description' => 'MODULE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'RBAC',
+                'display_name' => 'RBAC',
+                'module' => '',
+                'description' => 'MODULE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'user.list',
+                'display_name' => 'User List',
+                'module' => 'RBAC',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'user.add',
+                'display_name' => 'User Add',
+                'module' => 'RBAC',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'role.list',
+                'display_name' => 'Role List',
+                'module' => 'RBAC',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'role.add',
+                'display_name' => 'Role Add',
+                'module' => 'RBAC',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'building',
+                'display_name' => 'Building',
+                'module' => '',
+                'description' => 'MODULE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'building.list',
+                'display_name' => 'Building List',
+                'module' => 'Building',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'building.add',
+                'display_name' => 'Building Add',
+                'module' => 'Building',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'building.accounts',
+                'display_name' => 'Building Account',
+                'module' => '',
+                'description' => 'MODULE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'building.accounts.summary',
+                'display_name' => 'Summary',
+                'module' => 'Building Account',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'building.payments.list',
+                'display_name' => 'Payments List',
+                'module' => 'Building Account',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'rent',
+                'display_name' => 'Rent',
+                'module' => '',
+                'description' => 'MODULE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'rent.list',
+                'display_name' => 'Rent List',
+                'module' => 'Rent',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'rent.add',
+                'display_name' => 'Rent Add',
+                'module' => 'Rent',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'flat',
+                'display_name' => 'Flat',
+                'module' => '',
+                'description' => 'MODULE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'flat.list',
+                'display_name' => 'Flat List',
+                'module' => 'Flat',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'flat.upcoming.available',
+                'display_name' => 'Upcoming Available',
+                'module' => 'Flat',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'flat.add',
+                'display_name' => 'Flat Add',
+                'module' => 'Flat',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'flat.cost.list',
+                'display_name' => 'Cost',
+                'module' => 'Flat',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'flat.accounts.index',
+                'display_name' => 'Accounts',
+                'module' => 'Flat',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+
+            [
+                'name' => 'flats.bill.list',
+                'display_name' => 'Due Bills',
+                'module' => 'Flat',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'flats.bill.pay.history',
+                'display_name' => 'Bill Pay History',
+                'module' => 'Flat',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'tenant',
+                'display_name' => 'Tenant',
+                'module' => '',
+                'description' => 'MODULE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'tenant.list',
+                'display_name' => 'Tenant List',
+                'module' => 'Tenant',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'tenant.add',
+                'display_name' => 'Tenant Add',
+                'module' => 'Tenant',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'tenant.information.list',
+                'display_name' => 'Tenant Information',
+                'module' => 'Tenant',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'tenant.move.out.list',
+                'display_name' => 'Move Out List',
+                'module' => 'Tenant',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'move.out.request',
+                'display_name' => 'Move Out Request',
+                'module' => 'Tenant',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'visitor',
+                'display_name' => 'Visitor',
+                'module' => '',
+                'description' => 'MODULE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'visitor.list',
+                'display_name' => 'Visitor List',
+                'module' => 'Visitor',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'visitor.add',
+                'display_name' => 'Visitor Add',
+                'module' => 'Visitor',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'staff',
+                'display_name' => 'Staff',
+                'module' => '',
+                'description' => 'MODULE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'staff.list',
+                'display_name' => 'Staff List',
+                'module' => 'Staff',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'staff.add',
+                'display_name' => 'Staff Add',
+                'module' => 'Staff',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'notice',
+                'display_name' => 'Notice',
+                'module' => '',
+                'description' => 'MODULE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'notice.list',
+                'display_name' => 'Notice List',
+                'module' => 'Notice',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'notice.add',
+                'display_name' => 'Notice Add',
+                'module' => 'Notice',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'complain',
+                'display_name' => 'Complain',
+                'module' => '',
+                'description' => 'MODULE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'complain.list',
+                'display_name' => 'Complain List',
+                'module' => 'Complain',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'complain.add',
+                'display_name' => 'Complain Add',
+                'module' => 'Complain',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'committe',
+                'display_name' => 'Management Committe',
+                'module' => '',
+                'description' => 'MODULE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'committe.list',
+                'display_name' => 'Member List',
+                'module' => 'Management Committe',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'committe.add',
+                'display_name' => 'Member Add',
+                'module' => 'Management Committe',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'meeting',
+                'display_name' => 'Meeting',
+                'module' => '',
+                'description' => 'MODULE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'meeting.list',
+                'display_name' => 'Meeting List',
+                'module' => 'Meeting',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'meeting.add',
+                'display_name' => 'Meeting Add',
+                'module' => 'Meeting',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'maintenance-cost',
+                'display_name' => 'Maintenance Cost',
+                'module' => '',
+                'description' => 'MODULE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'maintenance.list',
+                'display_name' => 'Cost List',
+                'module' => 'Maintenance Cost',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'maintenance.add',
+                'display_name' => 'Cost Add',
+                'module' => 'Maintenance Cost',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+
+            [
+                'name' => 'setting-utility',
+                'display_name' => 'Utility',
+                'module' => '',
+                'description' => 'MODULE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'setting.utility.setup.list',
+                'display_name' => 'Utility BillSetup',
+                'module' => 'Utility',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'setting',
+                'display_name' => 'Setting',
+                'module' => '',
+                'description' => 'MODULE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'setting.general',
+                'display_name' => 'General Setting',
+                'module' => 'Setting',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'setting.bank.setup',
+                'display_name' => 'Bank Setup',
+                'module' => 'Setting',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'activity.log.list',
+                'display_name' => 'Activity Log',
+                'module' => 'Setting',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'report',
+                'display_name' => 'Report',
+                'module' => '',
+                'description' => 'MODULE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'report.complain.filter',
+                'display_name' => 'Complain Report',
+                'module' => 'Report',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'report.visitor.filter',
+                'display_name' => 'Visitor Report',
+                'module' => 'Report',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'report.mc.filter',
+                'display_name' => 'Maintenance Report',
+                'module' => 'Report',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'report.rental.filter',
+                'display_name' => 'Rental Report',
+                'module' => 'Report',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'language',
+                'display_name' => 'Language',
+                'module' => '',
+                'description' => 'MODULE',
+                'guard_name' => 'web',
+            ],
+            [
+                'name' => 'language.list',
+                'display_name' => 'Language',
+                'module' => 'Language',
+                'description' => 'FEATURE',
+                'guard_name' => 'web',
+            ],
+        ];
+
+        foreach ($permissions as $permissionData) {
+            $permission = new Permission();
+            $permission->name = $permissionData['name'];
+            $permission->display_name = $permissionData['display_name'];
+            $permission->module = $permissionData['module'];
+            $permission->description = $permissionData['description'];
+            $permission->guard_name = $permissionData['guard_name'];
+            $permission->save();
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.image {
+    width: 150px;
+    height: 150px;
+    padding: 0px;
+    border-radius: 50%;
+}
+
+.bg-main {
+    background-color: #3461ff;
+}
+
+.details-body{
+    padding: 0px !important;
+}

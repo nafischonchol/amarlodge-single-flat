@@ -1,0 +1,46 @@
+
+.image-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.img-preview {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+}
+
+.remove-icon {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px 8px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.image-flex {
+    flex-direction: column;
+    display: flex !important;
+  }
+
+.extra-image-section{
+    display: block;
+    overflow-y: auto;
+  }
+

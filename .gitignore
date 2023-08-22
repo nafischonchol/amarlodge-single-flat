@@ -1,0 +1,63 @@
+# Laravel specific
+/.env
+/public/images/building
+/public/images/committe
+/public/images/company
+/public/images/cost
+/public/images/flat
+/public/images/notice
+/public/images/staff
+/public/images/tenant
+/public/images/tenant-information
+/public/images/users
+/public/images/visitor
+/public/storage
+/storage/*.key
+/vendor
+/node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/.idea
+/.vscode
+
+# Laravel Mix
+/public/css/*
+/public/js/*
+/public/mix-manifest.json
+/mix-manifest.json
+/mix.js
+/public/hot
+
+.vite/
+
+# Homestead/Vagrant
+/.vagrant
+/.homestead
+
+# Testing
+/phpunit.xml
+/tests/coverage
+/vendor/phpunit
+
+# Composer
+/composer.lock
+/composer.phar
+/vendor/
+
+# Logs and Databases
+/storage/*.log
+/storage/*.sqlite
+/storage/*.sql
+/storage/debugbar
+/log/*.log
+/logs/*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+
