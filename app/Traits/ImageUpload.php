@@ -83,6 +83,9 @@ trait ImageUpload
             $fileName = substr(md5(time()), 0, 20).'.'.$extension;
             $imagePath = $path.$fileName;
             $filePath = public_path($imagePath);
+            if (! File::exists(public_path($path))) {
+                File::makeDirectory(public_path($path), 0777, true, true);
+            }
             $resizedImage = Image::make($file)->fit(400, 265);
             $resizedImage->save($filePath);
 
@@ -103,10 +106,9 @@ trait ImageUpload
         $image_base64 = base64_decode($base64Image[1]);
         $imagePath = $directory.$image_name.'.'.$extension;
         $filePath = public_path($imagePath);
-        // if (!is_dir($directory)) {
-        //     mkdir($directory, 0755, true);
-        // }
-
+        if (! File::exists(public_path($directory))) {
+            File::makeDirectory(public_path($directory), 0777, true, true);
+        }
         // Resize the image
         $resizedImage = Image::make($image_base64)->fit(400, 265)->encode($extension);
         $resizedImage->save($filePath);
@@ -131,6 +133,9 @@ trait ImageUpload
             $fileName = Str::uuid().'.'.$extension;
             $imagePath = $path.$fileName;
             $filePath = public_path($imagePath);
+            if (! File::exists(public_path($path))) {
+                File::makeDirectory(public_path($path), 0777, true, true);
+            }
             $resizedImage = Image::make($file)->fit(400, 265);
             $resizedImage->save($filePath);
             $uploadedImages[] = $imagePath;
@@ -149,9 +154,9 @@ trait ImageUpload
             $imageBase64 = base64_decode($base64Image[1]);
             $imagePath = $directory.$imageName;
             $filePath = public_path($imagePath);
-            // if (!is_dir($directory)) {
-            //     mkdir($directory, 0755, true);
-            // }
+            if (! File::exists(public_path($directory))) {
+                File::makeDirectory(public_path($directory), 0777, true, true);
+            }
 
             // Resize the image
             $resizedImage = Image::make($imageBase64)->fit(400, 265)->encode('webp');

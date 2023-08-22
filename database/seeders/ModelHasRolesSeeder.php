@@ -11,7 +11,7 @@ class ModelHasRolesSeeder extends Seeder
 {
     public function run(): void
     {
-        $user = User::find(1); // Get the user you want to assign roles to
+        $user = User::first(); // Get the user you want to assign roles to
         $role = Role::where('name', 'Owner')->first(); // Get the role you want to assign
 
         // Attach the role to the user using the morph relation
